@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A game where you play as a Soldier, fighting hordes of monsters coming your way. Can you survive?"
+    />
+    <title>Outbreak</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rock+Salt&family=Share+Tech&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="overflow-hidden m-0 bg-[#1D1C2E]">
+    <div
+      class="fixed top-1/2 left-1/2 transform translate-x-[-50%] translate-y-[-50%] z-10 opacity-90"
+      id="startGameEl"
+    >
+      <div
+        class="w-[900px] h-[600px] bg-[#1D1C2E] bg-[radial-gradient(#DD444488,_#1D1C2E)] rounded-[10px] border-4 border-[#4F4965] border-opacity-50 shadow-xl flex flex-col items-center justify-center"
+      >
+        <h1 class="text-[6rem] text-[#EFEFEF] text-center font-medium">
+          Outbreak
+        </h1>
+        <button
+          id="startGameBtn"
+          class="w-[250px] h-[50px] bg-[#EFEFEF] text-[#1D1C2E] rounded-sm shadow-2xl mt-20"
+        >
+          Start Game
+        </button>
+      </div>
+    </div>
+    <div
+      class="fixed top-1/2 left-1/2 transform translate-x-[-50%] translate-y-[-50%] z-10 opacity-90 hidden"
+      id="restartGameEl"
+    >
+      <div
+        class="w-[900px] h-[600px] bg-[#1D1C2E] bg-[radial-gradient(#DD444488,_#1D1C2E)] rounded-[10px] border-4 border-[#4F4965] border-opacity-50 shadow-xl flex flex-col items-center justify-center"
+      >
+        <h1
+          class="text-[3rem] text-[#EFEFEF] text-center font-medium mb-[50px]"
+        >
+          Score: <span id="scoreEl">0</span>
+        </h1>
+        <h1 class="text-[3rem] text-[#EFEFEF] text-center font-medium">
+          Kill Streak: <span id="killStreakEl">0</span>
+        </h1>
+        <button
+          id="restartGameBtn"
+          class="w-[250px] h-[50px] bg-[#EFEFEF] text-[#1D1C2E] rounded-sm shadow-2xl mt-20"
+        >
+          Restart Game
+        </button>
+      </div>
+    </div>
+    <canvas id="canvas"></canvas>
+    <img src="./Public/Other/Medkit.png" alt="" id="medkit" class="hidden" />
+    <img src="./Public/Other/Health.png" alt="" id="health" class="hidden" />
+    <img src="./Public/Player/bullet.png" alt="" id="bullet" class="hidden" />
+    <img src="./Public/Player/Run.png" alt="" id="playerRun" class="hidden" />
+    <img src="./Public/Player/Idle.png" alt="" id="playerIdle" class="hidden" />
+    <img src="./Public/Player/Walk.png" alt="" id="playerWalk" class="hidden" />
+    <img src="./Public/Player/Jump.png" alt="" id="playerJump" class="hidden" />
+    <img
+      src="./Public/Player/Shoot.png"
+      alt=""
+      id="playerShoot"
+      class="hidden"
+    />
+    <img
+      src="./Public/Enemies/Zombie/1.png"
+      alt=""
+      id="zombie1"
+      class="hidden"
+    />
+    <img
+      src="./Public/Enemies/Zombie/2.png"
+      alt=""
+      id="zombie2"
+      class="hidden"
+    />
+    <img
+      src="./Public/Enemies/Zombie/3.png"
+      alt=""
+      id="zombie3"
+      class="hidden"
+    />
+    <img
+      src="./Public/Enemies/Evil Eye/Eyes.png"
+      alt=""
+      id="eyes"
+      class="hidden"
+    />
+    <img
+      src="./Public/Player/Flying.png"
+      alt=""
+      id="playerFlying"
+      class="hidden"
+    />
+    <img
+      src="./Public/Player/Damage/Damage.png"
+      alt=""
+      id="damage"
+      class="hidden"
+    />
+    <img
+      src="./Public/Player/Fuelbar/GasCan.png"
+      alt=""
+      id="gasCan"
+      class="hidden"
+    />
+    <img
+      src="./Public/Player/Healthbar/heart.png"
+      alt=""
+      id="heart"
+      class="hidden"
+    />
+    <img
+      src="./Public/Player/IdleAir.png"
+      alt=""
+      id="playerIdleAir"
+      class="hidden"
+    />
+    <img
+      src="./Public/Enemies/Witch/Witches.png"
+      alt=""
+      id="witches"
+      class="hidden"
+    />
+    <img
+      src="./Public/Enemies/Red Demon/Demon.png"
+      alt=""
+      id="demon"
+      class="hidden"
+    />
+    <img
+      src="./Public/Player/ShootAir.png"
+      alt=""
+      id="playerShootAir"
+      class="hidden"
+    />
+    <img
+      src="./Public/Other/BloodSplatter.png"
+      alt=""
+      id="bloodSplatter"
+      class="hidden"
+    />
+    <script src="./script.js" type="module"></script>
+  </body>
+</html>
